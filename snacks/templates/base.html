@@ -1,0 +1,38 @@
+{% load compress %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks Tracker</title>
+
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %}
+
+</head>
+
+<body>
+    <header class="bg-white shadow-md p-4">
+        <nav class="flex space-x-8">
+            <a href="{% url 'snack_list' %}" class="text-grey-700 hover:text-green-500">Snack List</a>
+            <a href="{% url 'snack_detail' %}" class="text-grey-700 hover:text-green-500">Snack Detail</a>
+        </nav>
+    </header>
+    <main class="p-6">
+
+        {% block content %}
+        
+        {% endblock content %}
+    </main>
+    <footer class="bg-grey-100 text-center p-4 text-gray-600">
+        &copy; 2024 Snacks by Lana
+    </footer>
+</body>
+
+</html>
