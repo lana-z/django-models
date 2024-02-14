@@ -27,4 +27,4 @@
 
 ### Log
 
-- Monday: set up project with Django and Tailwind + Flowbite, played around a tiny bit with the styling
+- Tuesday: started set up for project with Django and Tailwind, almost there
